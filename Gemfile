@@ -2,12 +2,12 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+git_source(:github) {|Tech-Test--Database-Server| "https://github.com/Ajibaji/Tech-Test--Database-Server" }
 
 gem 'sinatra'
 gem 'rspec'
 gem 'capybara'
-# gem 'pg'
+gem 'simplecov'
+gem 'simplecov-console'
 gem 'rake'
 gem 'thin'
-# gem 'sinatra-flash'

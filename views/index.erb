@@ -1,1 +1,7 @@
 I say hello, you say <%= @message %>
+
+<% if !@params.empty? %>
+</br>
+<%= @params.keys.to_s %> and <%= @params.values[0].to_s %> have been stored
+
+<% end %>

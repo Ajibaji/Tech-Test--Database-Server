@@ -1,5 +1,7 @@
+require 'cgi'
+
 class Store
-  attr_accessor :storeHash
+  # attr_accessor :storeHash
 
   # def initialize
   #   storeHash = Hash.new("computer say no")
@@ -11,6 +13,11 @@ class Store
   def self.createHash
     storeHash = Hash.new("computer say no")
     # storeHash[:somekey]="somevalue"
+  end
+
+  def self.getParams(query)
+    p query
+    CGI::parse(query)
   end
 
   def self.saveToStore(key, value)

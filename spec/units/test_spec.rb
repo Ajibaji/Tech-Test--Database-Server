@@ -4,17 +4,18 @@ require_relative '../../app'
 describe Store do
 
   before(:each) do
-        @storeHash = Store.createHash
+        Store.createHash
+        @bank = Store.showHash
   end
 
    context "When testing the Store class" do
       it "should have a hash for storing key/value pairs" do
-         expect(@storeHash["somekey"]).to eq "computer say no"
+         expect(@bank["hello"]).to eq "computer say no"
       end
 
       it "should store and return a key/value pair" do
-        @storeHash["somekey"] = "somevalue"
-        expect(@storeHash["somekey"]).to eq "somevalue"
+        @bank["somekey"] = "somevalue"
+        expect(@bank["somekey"]).to eq "somevalue"
       end
 
    end

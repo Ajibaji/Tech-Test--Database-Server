@@ -1,26 +1,23 @@
 require 'cgi'
+require_relative '../app'
 
 class Store
-  # attr_accessor :storeHash
-
-  # def initialize
-  #   storeHash = Hash.new("computer say no")
-  #   storeHash[:somekey]="somevalue"
-  #   @storeHash = storeHash
-  #   puts @storeHash
-  # end
+  attr_accessor :bank
 
   def self.createHash
-    storeHash = Hash.new("computer say no")
-    # storeHash[:somekey]="somevalue"
+    @bank = Hash.new("computer say no")
+    @bank["somekey"]=["somevalue", "avalue"]
+  end
+
+  def self.showHash
+    @bank
   end
 
   def self.getParams(query)
-    p query
-    CGI::parse(query)
+    queryHash = CGI::parse(query)
   end
 
-  def self.saveToStore(key, value)
+  def self.saveToStore(queryHash)
 
   end
 
